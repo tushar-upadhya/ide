@@ -1,3 +1,4 @@
+import Footer from "@/components/footer/Footer";
 import ConvexClientProvider from "@/components/providers/ConvexClientProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
@@ -31,6 +32,8 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-gray-100 flex flex-col`}
         >
           <ConvexClientProvider>{children}</ConvexClientProvider>
+
+          <Footer />
         </body>
       </html>
     </ClerkProvider>

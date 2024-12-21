@@ -10,11 +10,16 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.9.4",
+    "@monaco-editor/react": "^4.6.0",
     "convex": "^1.17.4",
+    "framer-motion": "^11.15.0",
+    "lucide-react": "^0.468.0",
+    "monaco-editor": "^0.52.2",
     "next": "15.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "svix": "^1.44.0"
+    "svix": "^1.44.0",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
