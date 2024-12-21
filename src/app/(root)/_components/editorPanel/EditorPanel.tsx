@@ -8,8 +8,8 @@ import { motion } from "framer-motion";
 import { RotateCcwIcon, ShareIcon, TypeIcon } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { EditorPanelSkeleton } from "../../../../components/skeleton/EditorPanelSkeleton";
 import { defineMonacoThemes, LANGUAGE_CONFIG } from "../../_constants";
-import { EditorPanelSkeleton } from "../editor-panel-skeleton/EditorPanelSkeleton";
 
 const EditorPanel: React.FC = () => {
   const clerk = useClerk();
