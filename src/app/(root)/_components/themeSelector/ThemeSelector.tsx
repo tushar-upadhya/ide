@@ -1,5 +1,6 @@
 "use client";
 
+import useMounted from "@/hooks/useMounted";
 import { useCodeEditorStore } from "@/stores/useCodeEditorStore";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -24,7 +25,8 @@ const THEME_ICONS: Record<string, React.ReactNode> = {
 
 const ThemeSelector: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
+  const mounted = useMounted();
   const { theme, setTheme } = useCodeEditorStore();
   const dropDownRef = useRef<HTMLDivElement>(null);
   const currentTheme = THEMES.find((t) => t.id === theme);
@@ -41,10 +43,6 @@ const ThemeSelector: React.FC = () => {
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  useEffect(() => {
-    setMounted(true);
   }, []);
 
   if (!mounted) return null;
